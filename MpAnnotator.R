@@ -17,9 +17,6 @@ check <- require(stringr, quietly=T, warn.conflicts=T)){
 args <- commandArgs(trailingOnly=T)
 input <- args[1]
 
-data <- "/biodata/dep_psl/common/MpAnnotator/data/"
-# data <- "/path/to/your/ref_data/directory/" # This in an alternative, in case you don't want to work on the cluster. You can copy reference data from the path above and save to your local directory. Give the path to your reference data directory here and it should work.
-
 		if(!str_detect(input, ".txt$")){
 			stop("Please specify a correct input file (*.txt).")
 		}
@@ -28,8 +25,10 @@ data <- "/biodata/dep_psl/common/MpAnnotator/data/"
 		if(length(args) == 2 & !(args[2] %in% c(0, 1, 2, 3))) stop("Unknown option is given. Please choose the output option from 0, 1, 2, and 3 (see README for details).")
 
 # ===== Loading Data ===== #
-
 # load reference data
+data <- "/biodata/dep_psl/common/MpAnnotator/data/"
+# data <- "/path/to/your/ref_data/directory/" # This in an alternative, in case you don't want to work on the cluster. You can copy reference data from the path above and save to your local directory. Give the path to your reference data directory here and it should work.
+
 RLK <- read.table(paste(data, "MpLRRRLK.txt", sep=""),                                        header=T, row.names=NULL, sep="\t", comment.char="", quote="",   stringsAsFactors=F)
 ref <- read.table(paste(data, "Marchantia_Step0_Combined_Annotations_v5.1_v3.1.csv", sep=""), header=T, row.names=NULL, sep=",",  comment.char="", quote="\"", stringsAsFactors=F)
 
