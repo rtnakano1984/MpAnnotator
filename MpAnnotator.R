@@ -20,9 +20,7 @@ args <- commandArgs(trailingOnly=T)
 		if(length(args) == 2 & !(args[2] %in% c(0, 1, 2, 3))) stop("Unknown option is given. Please choose the output option from 0, 1, 2, and 3 (see README for details).")
 
 input <- args[1]
-		if(length(args) > 0 & !str_detect(input, ".txt$")){
-			stop("Please specify a correct input file (*.txt).")
-		}
+		if(length(args) > 0 & !str_detect(input, ".txt$")) stop("Please specify a correct input file (*.txt).")
 
 
 # ===== Loading Data ===== #
