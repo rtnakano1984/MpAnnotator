@@ -15,14 +15,15 @@ check <- require(stringr, quietly=T, warn.conflicts=T)){
 
 # paths
 args <- commandArgs(trailingOnly=T)
-input <- args[1]
+		if(length(args) == 0) stop("Please specify the input file.")
+		if(length(args) > 2) stop("Unknown option is given. Please only give the input file path and the output option (optional).")
+		if(length(args) == 2 & !(args[2] %in% c(0, 1, 2, 3))) stop("Unknown option is given. Please choose the output option from 0, 1, 2, and 3 (see README for details).")
 
-		if(!str_detect(input, ".txt$")){
+input <- args[1]
+		if(length(args) > 0 & !str_detect(input, ".txt$")){
 			stop("Please specify a correct input file (*.txt).")
 		}
 
-		if(length(args) > 2) stop("Unknown option is given. Please only give the input file path and the output option (optional).")
-		if(length(args) == 2 & !(args[2] %in% c(0, 1, 2, 3))) stop("Unknown option is given. Please choose the output option from 0, 1, 2, and 3 (see README for details).")
 
 # ===== Loading Data ===== #
 # load reference data
