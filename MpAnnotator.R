@@ -1,6 +1,6 @@
 # Rscript to annotate genes based on Gene ID (v5.1)
 # Originally by Ryohei Thomas Nakano, PhD; nakano@mpipz.mpg.de
-# 23 Dec 2021
+# Last modified: 19 Jan 2022
 # Usage: Rscript MpAnnotator.R [path_to_input_file (mendatory; has to be *.txt)] [output_file (optional) - 1: simplified, 2: concatenated, 3: full, 0: all of these three]
 
 options(warn=-1)

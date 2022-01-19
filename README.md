@@ -43,4 +43,5 @@ Rscript MpAnnotator.R [input] [output type]
 
 -----
 
+Contact: Ryohei Thomas Nakano, PhD (nakano@mpipz.mpg.de)  
 See also: [MarpolBase](https://marchantia.info/)
