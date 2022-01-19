@@ -2,7 +2,7 @@
 
 This is an R script to insert gene annitation information to the list of gene IDs.  
 - Gene IDs need to be listed in a text file (\*.txt).  
-- Gene IDs should be in the v5.1 format. Those in v3.1, or the mixture of v5.1 and v3.1 are not accepted.  
+- Gene IDs should be in the MpGene ID (v5.1) format. Mapoly IDs (v3.1), or the mixture of MpGene IDs and Mapoly IDs are not accepted.  
 - The input file should only contain one column (gene IDs) _**without a header row**_.  
 - Gene IDs can be concatenated with ";", as in the case of a Mass Spec result table.
 - Reference data should be stored at: `/biodata/dep_psl/common/MpAnnotator/data`. Alternatively, you can download and stored them in your local directory. In that case, the respective line in the script needs to be modified.
@@ -40,3 +40,7 @@ Rscript MpAnnotator.R [input] [output type]
 ### Requirement:
 ##### R software (https://www.r-project.org/)
 ##### R package "stringr"
+
+-----
+
+See also: [MarpolBase](https://marchantia.info/)

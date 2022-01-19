@@ -40,8 +40,8 @@ IDs <- read.table(input, header=F, sep="\t", row.names=NULL, comment.char="", qu
 
 IDs <- IDs$V1
 		if(!str_detect(IDs[1], "^Mp|^Mapoly")) stop("Please do not include any header row. Please only put Gene IDs.")
-		if(sum(str_detect(IDs, "^Mapoly")) == length(IDs)) stop("This script only accept IDs in v5.1. v3.1 IDs are not accepted.")
-		if(sum(str_detect(IDs, "^Mp")) != length(IDs)) stop("There are some IDs that do not match with v5.1 format. Please check and modify the input file.")
+		if(sum(str_detect(IDs, "^Mapoly")) == length(IDs)) stop("This script only accept MpGene IDs (v5.1). Mapoly IDs (v3.1) are not accepted.")
+		if(sum(str_detect(IDs, "^Mp")) != length(IDs)) stop("There are some IDs that do not match with the MpGene ID (v5.1) format. Please check and modify the input file.")
 
 
 
